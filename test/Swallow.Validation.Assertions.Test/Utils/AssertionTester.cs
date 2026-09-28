@@ -15,7 +15,6 @@ internal static class AssertionTester
         return assertion.Invoke(validator).Result();
     }
 
-    #nullable enable
     public static bool Assert<T>(T value, IAsserter<T> asserter, [NotNullWhen(false)] out ValidationError? error)
     {
         var valueProvider = TestValue.Of(value);

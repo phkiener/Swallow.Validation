@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyName>Swallow.Validation</AssemblyName>
     <RootNamespace>Swallow.Validation</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Swallow.Validation.Core\Swallow.Validation.Core.csproj" />
   </ItemGroup>

@@ -19,7 +19,7 @@ public sealed class SimpleAsserterTest
 
         var typedError = error as EntityValidationError;
         Assert.That(typedError?.ValidationErrors, Has.Count.EqualTo(1));
-        Assert.That(typedError?.ValidationErrors, Has.All.Matches<ValidationError>(v => v.PropertyName == valueProvider.Name));
+        Assert.That(typedError?.ValidationErrors, Has.All.Matches<ValidationError>(v => v!.PropertyName == valueProvider.Name));
     }
 
     [Test]

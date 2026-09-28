@@ -12,10 +12,10 @@ public sealed class ValidationContainerRegistrationTests
     {
         var serviceCollection = new ServiceCollection().AddValidationContainer(Assembly.GetExecutingAssembly());
 
-        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(ObjectAsserter)));
-        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(IntAsserter)));
-        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(StringAsserter)));
-        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(AnotherStringAsserter)));
+        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd!.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(ObjectAsserter)));
+        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd!.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(IntAsserter)));
+        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd!.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(StringAsserter)));
+        Assert.That(serviceCollection, Has.One.Matches<ServiceDescriptor>(static sd => sd!.Lifetime == ServiceLifetime.Singleton && sd.ServiceType == typeof(AnotherStringAsserter)));
     }
 
     [Test]
@@ -23,7 +23,7 @@ public sealed class ValidationContainerRegistrationTests
     {
         var serviceCollection = new ServiceCollection().AddValidationContainer(Assembly.GetExecutingAssembly());
 
-        Assert.That(serviceCollection, Has.None.Matches<ServiceDescriptor>(static sd => sd.ServiceType == typeof(AsserterWithGeneric<>)));
+        Assert.That(serviceCollection, Has.None.Matches<ServiceDescriptor>(static sd => sd!.ServiceType == typeof(AsserterWithGeneric<>)));
     }
 
     [Test]
@@ -31,7 +31,7 @@ public sealed class ValidationContainerRegistrationTests
     {
         var serviceCollection = new ServiceCollection().AddValidationContainer(Assembly.GetExecutingAssembly());
 
-        Assert.That(serviceCollection, Has.None.Matches<ServiceDescriptor>(static sd => sd.ServiceType == typeof(TestAsserterBase<>)));
+        Assert.That(serviceCollection, Has.None.Matches<ServiceDescriptor>(static sd => sd!.ServiceType == typeof(TestAsserterBase<>)));
     }
 
     [Test]
