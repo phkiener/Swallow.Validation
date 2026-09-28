@@ -16,9 +16,18 @@
     <File Path="src/Directory.Build.props" />
     <File Path="src/Directory.Build.targets" />
     <File Path="src/Directory.Packages.props" />
+    <File Path="src\Swallow.Validation.proj" />
   </Folder>
   <Folder Name="/Additional Items/Workflows/">
     <File Path=".github/workflows/build.yaml" />
     <File Path=".github/workflows/publish.yaml" />
   </Folder>
+  <Project Path="src/Swallow.Validation.Assertions/Swallow.Validation.Assertions.csproj" />
+  <Project Path="src/Swallow.Validation.Core/Swallow.Validation.Core.csproj" />
+  <Project Path="src/Swallow.Validation.ServiceCollection/Swallow.Validation.ServiceCollection.csproj" />
+  <Project Path="src/Swallow.Validation/Swallow.Validation.csproj" />
+  <Project Path="test/Swallow.Validation.Assertions.Test/Swallow.Validation.Assertions.Test.csproj" />
+  <Project Path="test/Swallow.Validation.Core.Test/Swallow.Validation.Core.Test.csproj" />
+  <Project Path="test/Swallow.Validation.ServiceCollection.Test/Swallow.Validation.ServiceCollection.Test.csproj" />
+  <Project Path="test/Swallow.Validation.TestUtils/Swallow.Validation.TestUtils.csproj" />
 </Solution>
