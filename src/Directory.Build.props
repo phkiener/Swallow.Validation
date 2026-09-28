@@ -5,6 +5,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
     <EmbedAllSources>true</EmbedAllSources>
+
+    <Nullable>disable</Nullable> <!-- TODO: Make nullable the default -->
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration) == 'Release'">
@@ -13,19 +15,22 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Package metadata">
-    <PackageTags>swallow</PackageTags> <!-- TODO: Fill in information -->
-    <Description></Description> <!-- TODO: Fill in information -->
+    <PackageTags>swallow;validation;fluent;extensible;lightweight</PackageTags>
+    <Description>
+      A lightweight, fluent and extensible validation library that allows you to specify validations right where you need them.
+      No extra classes needed, strongly typed errors and extensibility built right into the core.
+    </Description>
 
     <Authors>Philipp Kiener</Authors>
-    <Copyright>2026 Philipp Kiener</Copyright> <!-- TODO: Fill in information -->
-    <PackageProjectUrl>https://github.com/phkiener/Swallow.Template</PackageProjectUrl> <!-- TODO: Fill in information -->
+    <Copyright>2019-2026 Philipp Kiener</Copyright>
+    <PackageProjectUrl>https://github.com/phkiener/Swallow.Validation</PackageProjectUrl>
 
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/phkiener/Swallow.Template</RepositoryUrl> <!-- TODO: Fill in information -->
+    <RepositoryUrl>https://github.com/phkiener/Swallow.Validation</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
